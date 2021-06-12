@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './styles/App.css';
+import Upload from './components/Upload';
+import Uploading from './components/Uploading';
+import Uploaded from './components/Uploaded';
 
 function App() {
+  const [uploadState, setUploadState] = useState('upload');
+  const [uploadedImageURL, setUploadedImageURL] = useState('');
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <main className = 'appMain'>
+        {uploadState === 'uploaded' ? 
+          <Uploaded uploadedImageURL = {uploadedImageURL}/> :
+          uploadState === 'uploading' ? 
+          <Uploading/> : 
+          <Upload setUploadState = {setUploadState} setUploadedImageURL = {setUploadedImageURL}/>
+        }
+      </main>
+      <footer className = 'appFooter'>
+        created by <div className = 'appFooterName'>Swaraj9</div>
+      </footer>
     </div>
   );
 }

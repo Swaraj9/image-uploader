@@ -1,0 +1,37 @@
+.uploading {
+  background-color: var(--background-color-light);
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.uploadingBarContainer {
+  width: 400px;
+  height: 15px;
+  background-color: #c9c9c9;
+  margin-top: 20px;
+  border-radius: 16px;
+}
+
+.uploadingBar {
+  width: 100px;
+  height: 100%;
+  border-radius: 16px;
+  background-color: var(--primary-color);
+  animation: loading 2s ease infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

@@ -1,0 +1,78 @@
+.uploaded {
+  background-color: var(--background-color-light);
+  height: 500px;
+  width: 50%;
+  min-width: 450px;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.uploadedTitle {
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.uploadedImageContainer {
+  margin-top: 20px;
+}
+
+.uploadedImage {
+  height: auto;
+  max-width: 100%;
+  max-height: 250px;
+  border-radius: 8px;
+}
+
+.uploadedLinkContainer {
+  margin-top: 20px;
+  background-color: var(--background-color);
+  height: 50px;
+  align-self: stretch;
+  display: flex;
+  border-radius: 8px;
+  margin-top: auto;
+}
+
+.uploadedLink {
+  height: 100%;
+  margin: 5px 10px;
+  font-size: 20px;
+  overflow: hidden;
+  flex: 1;
+  line-height: 40px;
+}
+
+.uploadedLinkButton {
+  border-radius: 8px;
+  border: 0;
+  background-color: var(--primary-color);
+  color: white;
+  transition: background-color 100ms;
+}
+
+.uploadedLinkButton:hover {
+  background-color: #05afe3;
+}
+
+.uploadedLinkButton:active {
+  background-color: #059de3;
+}
+
+.uploadedLinkButtonCopied {
+  background-color: #63d10f;
+  border: 0;
+  border-radius: 8px;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .uploaded {
+    width: 90vw;
+  }
+}
